@@ -1,0 +1,49 @@
+/* general styles */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.container {
+ display: flex;
+ flex-direction: column;
+ min-height: 100vh;
+}
+/* header */
+.container header {
+  display: flex;
+  justify-content: space-between;
+  /* padding: 30px; */
+  background-color: red;
+}
+.container header .logo {
+  width: 250px;
+  padding: 20px 0;
+  background-color: brown;
+}
+.container header .upgrade {
+  background-color: blue;
+}
+
+/* main */
+.container main {
+  flex-grow: 1;
+  display: flex;
+  /* padding: 30px 16px; */
+  background-color: #888;
+}
+.side-bar {
+  flex-basis: 250px;
+  background-color: brown;
+}
+.content {
+  flex-grow: 1;
+  background-color: yellow;
+}
+/* footer */
+.container footer {
+  padding: 30px;
+  background-color: black;
+}
