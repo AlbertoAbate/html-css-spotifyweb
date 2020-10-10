@@ -113,6 +113,10 @@ h4 {
 .side-bar .home-playlist li a {
   font-size: 12px;
   text-decoration: none;
+  color: #4c5a56;
+}
+.side-bar .home-playlist li a:hover,
+.home-playlist li a i:hover {
   color: #d9d6d6;
 }
 .side-bar .home-playlist li span {
@@ -133,7 +137,10 @@ h4 {
 .side-bar .account {
   /* flex-basis: 20%; */
   background-color: #000000;
-  color: #fff;
+  color: #4c5a56;
+}
+.side-bar .account:hover {
+  color: #d9d6d6;
 }
 .side-bar .account .installa {
   max-width: 80%;
@@ -150,9 +157,10 @@ h4 {
   border-radius: 50%;
 }
 .account .name span {
+  margin-left: 8px;
+  font-size: 14px;
   font-weight: 700;
   color: #fff;
-  margin-left: 8px;
 }
 .content {
   flex-grow: 1;
@@ -184,8 +192,11 @@ h4 {
 .content .menu li a {
   text-decoration: none;
   text-transform: uppercase;
-  color: #cbcfcf;
+  color: #4c5a56;
   font-size: 12px;
+}
+.content .menu li a:hover {
+  color: #d9d6d6;
 }
 .bordo {
   border-bottom: 2px solid green;
@@ -206,6 +217,7 @@ h4 {
   flex-basis: calc((100% / 6) - 15px);
   margin: 15px 7px;
   list-style: none;
+  position: relative;
 }
 .content .category-title li img {
   max-width: 100%;
@@ -215,6 +227,27 @@ h4 {
   text-align: center;
   font-size: 10px;
 }
+.layover i {
+  display: none;
+}
+.category-title li:hover .layover {
+ width: 100%;
+ height: 100%;
+ background-color: rgba(0, 0, 0, 0.3);
+ position: absolute;
+ top: 0;
+ left: 0;
+}
+.category-title:hover .layover i {
+  display: block;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 50px;
+  color: #fff;
+}
+
 /* footer */
 .container footer {
   padding: 10px;
@@ -235,6 +268,10 @@ footer .col-left img {
 .col-left .title h2 {
   color: #fff;
   font-size: 12px
+}
+footer h4:hover,
+footer .heart i:hover {
+  color: #d9d6d6;
 }
 .col-left .heart {
   color: #4c5a56;
@@ -289,6 +326,9 @@ footer .col-center {
   left: 25px;
   top: 5px;
 }
+.col-center span:hover {
+  font-size: 20px;
+}
 footer .col-right {
   height: 30px;
   flex-basis: 250px;
@@ -313,6 +353,9 @@ footer .col-right {
   top: 15px;
   right: 72px;
 }
+/* .stanghetta-small:before:hover{
+  color: green;
+} */
 
 @media screen and (max-width: 991px) {
   .content .category-title ul {
