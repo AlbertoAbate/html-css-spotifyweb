@@ -353,9 +353,9 @@ footer .col-right {
   top: 15px;
   right: 72px;
 }
-/* .stanghetta-small:before:hover{
+.stanghetta-small:hover:before{
   color: green;
-} */
+}
 
 @media screen and (max-width: 991px) {
   .content .category-title ul {
