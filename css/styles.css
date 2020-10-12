@@ -60,6 +60,9 @@ h4 {
 .container header .logo img {
   width: 100px;
 }
+.container header .logo img:nth-child(2) {
+  display: none;
+}
 .upgrade button {
   line-height: 70px;
   margin-right: 15px;
@@ -97,6 +100,13 @@ h4 {
   justify-content: space-between;
   background-color: #000000;
 }
+.bordino {
+  border-left: 2px solid green;
+  padding-left: 16px;
+}
+.side-bar .home-playlist li:first-child{
+  margin-left: 2px;
+}
 .side-bar .home-playlist {
   flex-basis: 40%;
   background-color: #000000;
@@ -126,7 +136,7 @@ h4 {
   text-transform: uppercase;
   color: #fff;
   font-weight: 700;
-  margin: 4px 0;
+  margin: 4px 18px;
 }
 .home-playlist li a i {
   padding: 5px;
@@ -211,10 +221,11 @@ h4 {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 40px;
+  padding-left: 7px;
 }
 .content .category-title li {
   flex-basis: calc((100% / 6) - 15px);
-  margin: 15px 7px;
+  margin: 15px 15px 15px 0;
   list-style: none;
   position: relative;
 }
@@ -325,6 +336,9 @@ footer .col-center {
   left: 25px;
   top: 5px;
 }
+.col-center .barra .linea-small:hover::before {
+  background-color: green;
+}
 .play li span i {
   transition: font-size 2s;
 }
@@ -345,7 +359,7 @@ footer .col-right {
 .col-right .stanghetta:before {
   content: '';
   position: absolute;
-  width: 89px;
+  width: 80px;
   height: 2px;
   background-color: #4c5a56;
   top: 16px;
@@ -359,14 +373,8 @@ footer .col-right {
   top: 16px;
   right: 72px;
 }
-.stanghetta:hover::before{
-  content: '';
-  position: absolute;
-  width: 30px;
-  height: 2px;
+.col-right .stanghetta-small:hover::before{
   background-color: green;
-  top: 16px;
-  right: 72px;
 }
 
 @media screen and (max-width: 991px) {
@@ -381,19 +389,35 @@ footer .col-right {
   }
 }
 @media screen and (max-width: 767px) {
-   .container header .logo {
+  .container header .logo {
     width: 100px;
     padding: 5px 0;
- }
-   .side-bar {
+  }
+  .side-bar {
     flex-basis: 100px;
-}
-/* .content .category-title {
-  display: flex;
-  flex-wrap: wrap;
-} */
-   .content .category-title li {
+  }
+  .content .category-title li {
    flex-basis: calc((100% / 2) - 15px);
    margin-right: 15px;
    margin-bottom: 15px;
+  }
+  .logo a img:first-child {
+    display: none;
+  }
+  .container header .logo img:nth-child(2) {
+    display: block;
+    width: 20px;
+  }
+  .side-bar li span,
+  .side-bar .account .installa span,
+  .side-bar .account .name span {
+    display: none;
+  }
+  #piu {
+    display: none;
+  }
+  .side-bar .home-playlist li img {
+    position: relative;
+    top: -44px;
+  }
 }
