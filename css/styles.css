@@ -50,7 +50,6 @@ h4 {
 .container header {
   display: flex;
   justify-content: space-between;
-  /* padding: 30px; */
   background-color: #1e1f24;
 }
 .container header .logo {
@@ -238,7 +237,7 @@ h4 {
  top: 0;
  left: 0;
 }
-.category-title:hover .layover i {
+.category-title li:hover .layover i {
   display: block;
   position: absolute;
   top: 30%;
@@ -311,7 +310,7 @@ footer .col-center {
 .col-center .barra .linea:before {
   content: '';
   position: absolute;
-  width: 420px;
+  width: 530px;
   height: 2px;
   background-color: #4c5a56;
   left: 25px;
@@ -326,8 +325,15 @@ footer .col-center {
   left: 25px;
   top: 5px;
 }
+.play li span i {
+  transition: font-size 2s;
+}
 .col-center span:hover {
   font-size: 20px;
+}
+.col-center li i,
+.col-right li i {
+  color: #fff;
 }
 footer .col-right {
   height: 30px;
@@ -342,7 +348,7 @@ footer .col-right {
   width: 89px;
   height: 2px;
   background-color: #4c5a56;
-  top: 15px;
+  top: 16px;
 }
 .col-right .stanghetta-small:before {
   content: '';
@@ -350,11 +356,17 @@ footer .col-right {
   width: 30px;
   height: 2px;
   background-color: #cecece;
-  top: 15px;
+  top: 16px;
   right: 72px;
 }
-.stanghetta-small:hover:before{
-  color: green;
+.stanghetta:hover::before{
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background-color: green;
+  top: 16px;
+  right: 72px;
 }
 
 @media screen and (max-width: 991px) {
